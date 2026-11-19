@@ -1,0 +1,276 @@
+/* Focused visual pass based on the VibeUp brief and reviewed references. */
+:root {
+  --brand-blue: var(--brand-purple);
+  --blue: var(--brand-purple);
+  --blue-2: #f2eafb;
+  --ink: #292430;
+  --muted: #626a76;
+  --line: #e7e1ea;
+  --shadow: 0 8px 24px rgba(35, 2, 84, .055);
+}
+
+body { color: var(--ink); background: #f8f7fa; }
+::selection { background: #eadbf8; color: var(--brand-dark-purple); }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--brand-pink);
+  outline-offset: 2px;
+}
+
+.nav-link.active, .mobile-nav a.active { background: #f2eafb !important; color: var(--brand-purple) !important; }
+.nav-count { background: #f2eafb; color: var(--brand-purple); }
+.button-primary, .send-button { background: var(--brand-purple) !important; box-shadow: 0 3px 9px rgba(99, 13, 201, .17); }
+.button-primary:hover, .send-button:hover { background: #4f08a7 !important; }
+.button-secondary, .pill-blue, .role-selector button.selected { background: #f2eafb !important; color: var(--brand-purple) !important; }
+.role-selector button.selected { border-color: var(--brand-purple) !important; }
+.switch.on { background: var(--brand-purple) !important; }
+.skill-tag:hover, .settings-nav a.active, .settings-nav a:hover { background: #f2eafb; color: var(--brand-purple); }
+.comment-area form button { background: #f2eafb; color: var(--brand-purple); }
+.note-dot, .notification-dot, .role-toggle-dot.company { background: var(--brand-gold); }
+.pill-orange { background: #fff1d4; color: #765000; }
+.avatar { background: #f2eafb; color: #4f08a7; }
+.avatar-student:nth-of-type(3n) { background: #fce8f3; color: #9b1b63; }
+.avatar-company { background: #fff1d4; color: #765000; }
+.avatar-educator { background: #e8e2f2; color: var(--brand-dark-purple); }
+
+/* Keep the feed's useful reputation signals, but make them read as one strip. */
+.feed-metrics {
+  gap: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+.feed-metrics .metric-card {
+  min-height: 76px;
+  align-items: center;
+  padding: 11px 14px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.feed-metrics .metric-card:last-child { border-right: 0; }
+.feed-metrics .metric-icon {
+  width: 27px;
+  height: 27px;
+  background: transparent !important;
+}
+.feed-metrics .metric-card:nth-child(1) .metric-icon { color: var(--brand-purple); }
+.feed-metrics .metric-card:nth-child(2) .metric-icon { color: #b72278; }
+.feed-metrics .metric-card:nth-child(3) .metric-icon { color: #946100; }
+.feed-metrics .metric-card:nth-child(4) .metric-icon { color: var(--brand-dark-purple); }
+.feed-metrics .metric-card strong { color: var(--brand-dark-purple); font-size: 18px; }
+.feed-metrics .metric-card span:not(.metric-icon) { color: #53505a; font-size: 10.5px; }
+.feed-metrics .metric-card small { color: #6b6671; font-size: 9.5px; }
+
+/* Use one compact brand moment; remove the repeated orbital decoration. */
+.intro-banner {
+  min-height: 158px;
+  border-left: 4px solid var(--brand-purple);
+  border-radius: 4px 10px 10px 4px;
+  background: #f2eafb;
+}
+.intro-banner h2 { color: var(--brand-dark-purple); }
+.intro-banner p { color: #5c5366; font-size: 12px; }
+.intro-banner a, .side-card > a, .profile-mini > a { color: var(--brand-purple); }
+.intro-banner .banner-shape {
+  top: 50%;
+  right: 25px;
+  width: 104px;
+  height: 104px;
+  border: 1px solid #e2d5ee;
+  border-radius: 9px;
+  background: #fff;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.intro-banner .banner-shape::before, .intro-banner .banner-shape::after { display: none; }
+.banner-shape-mark { width: 68px; height: 68px; }
+.community-promo { border-left: 3px solid var(--brand-purple); border-radius: 0 10px 10px 0; background: #f4edfb; }
+.community-promo::after, .mini-cover::after { display: none; }
+.mini-cover { background: var(--brand-purple); border-bottom: 4px solid var(--brand-gold); }
+
+/* Give portfolio thumbnails a calmer, more artifact-like treatment. */
+.cover-orbit { display: none !important; }
+.project-cover { border-radius: 7px; }
+.cover-label, .cover-index { letter-spacing: .04em; font-size: 9px; }
+.cover-core {
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(35, 2, 84, .08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 4px 12px rgba(35, 2, 84, .1);
+  transform: none;
+}
+.cover-core .vibeup-icon { width: 62px; height: 62px; border-radius: 8px; }
+.community-orb::before, .community-orb::after { display: none; }
+.community-card-art .cover-orbit { display: none !important; }
+.profile-cover {
+  background-image: linear-gradient(112deg, rgba(35, 2, 84, .035), transparent 48%);
+}
+.profile-cover::before {
+  top: 50%;
+  right: 14%;
+  width: 124px;
+  height: 124px;
+  border: 0;
+  border-radius: 0;
+  background: url('/brand/vibeup-mark-v1.png') center / contain no-repeat;
+  opacity: .17;
+  transform: translateY(-50%) rotate(-4deg);
+}
+.profile-cover::after {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, var(--brand-purple), var(--brand-pink) 58%, var(--brand-gold));
+}
+.profile-cover .cover-index { display: none; }
+@media (max-width: 700px) {
+  .profile-cover::before { right: 9%; width: 92px; height: 92px; }
+}
+
+/* Stronger contrast and a more comfortable reading size across the product. */
+.page-header p { color: #626a76; font-size: 13px; }
+.eyebrow { color: #69616f; font-size: 10px; letter-spacing: .045em; }
+.muted { color: #626a76; font-size: 11px; }
+.post-copy { color: #45434b; font-size: 12px; line-height: 1.7; }
+.post-author strong { font-size: 12px; }
+.post-author span { color: #65616b; font-size: 10.5px; }
+.post-project p, .community-card-body > p { color: #5f5b65; font-size: 10.5px; }
+.metric-card small, .mini-stats span { color: #68636d; }
+.profile-mini h3 { font-size: 14px; }
+.profile-mini > p { color: #626a76; font-size: 10.5px; line-height: 1.4; }
+.mini-stats span { font-size: 9.5px; }
+.mini-stats strong { font-size: 14px; }
+.side-card-title h3, .side-card h3 { font-size: 13px; }
+.trend-row { font-size: 11px; }
+.trend-row small { color: #625b68; font-size: 10px; }
+.event-mini p { color: #625b68; font-size: 10px; }
+.messages-title p { color: #626a76; font-size: 12px; }
+.conversation-row strong, .conversation-header strong { color: #38343e; font-size: 11px; }
+.conversation-row small, .conversation-header span, .conversation-row time { color: #66616c; font-size: 9px; }
+.conversation-search input { font-size: 12px; }
+.message-bubble p { font-size: 11px; line-height: 1.55; }
+.comment-area input, .stack-form input, .stack-form textarea, .stack-form select { font-size: 12px; }
+.form-panel label, .stack-form label, .content-form label, .filter-panel label, .report-filters label { font-size: 11px; }
+.calendar-day i { font-size: 9px; }
+
+@media (max-width: 700px) {
+  .feed-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feed-metrics .metric-card { min-height: 69px; padding: 9px 10px; }
+  .feed-metrics .metric-card:nth-child(odd) { border-right: 1px solid var(--line); }
+  .feed-metrics .metric-card:nth-child(even) { border-right: 0; }
+  .feed-metrics .metric-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .feed-metrics .metric-card span:not(.metric-icon) { font-size: 10px; }
+  .feed-metrics .metric-card small { font-size: 9px; }
+  .intro-banner { min-height: 168px; padding-right: 94px; }
+  .intro-banner h2 { max-width: 245px; font-size: 18px; }
+  .intro-banner p { max-width: 245px; font-size: 11px; }
+  .intro-banner .banner-shape { right: 12px; width: 68px; height: 68px; }
+  .banner-shape-mark { width: 50px; height: 50px; }
+  .post-actions button { font-size: 10px; }
+  .post-author span { font-size: 10px; line-height: 1.4; }
+  .messages-page .messages-title p { font-size: 11px; }
+  .messages-page .messages-title > .button { font-size: 10px; }
+  .messenger { grid-template-columns: minmax(126px, 38%) minmax(0, 1fr); }
+  .conversation-search { padding: 8px 6px; }
+  .conversation-search input { width: 100%; min-width: 0; padding: 0 6px; font-size: 10px !important; }
+  .conversation-row { justify-content: flex-start; gap: 6px; padding: 8px 5px; min-height: 64px; }
+  .conversation-row > span { display: grid !important; gap: 3px; }
+  .conversation-row time { display: none !important; }
+  .conversation-row strong { font-size: 10px; }
+  .conversation-row small { display: block !important; font-size: 9px; }
+  .message-history { padding: 10px 7px; }
+  .message-bubble p { font-size: 10px; }
+  .composer > input { min-width: 0; font-size: 10px; }
+}
+
+@media (max-width: 390px) {
+  .feed-metrics .metric-card { padding-inline: 7px; gap: 6px; }
+  .feed-metrics .metric-icon { width: 22px; }
+  .feed-metrics .metric-card small { display: none; }
+  .intro-banner { padding-left: 15px; padding-right: 78px; }
+  .intro-banner .banner-shape { right: 7px; width: 58px; height: 58px; }
+  .banner-shape-mark { width: 43px; height: 43px; }
+  .messages-page .messenger.messenger-list-mode,
+  .messages-page .messenger.messenger-conversation-mode {
+    grid-template-columns: minmax(0, 1fr);
+    height: calc(100dvh - 265px);
+    min-height: min(420px, calc(100dvh - 265px));
+    max-height: calc(100dvh - 265px);
+  }
+  .messenger.messenger-list-mode .conversation-list { display: flex; overflow-y: auto; border-right: 0; }
+  .messenger.messenger-list-mode .conversation-view { display: none; }
+  .messenger.messenger-conversation-mode .conversation-list { display: none; }
+  .messenger.messenger-conversation-mode .conversation-view { display: flex; }
+  .conversation-list { overflow-y: auto; }
+  .conversation-search { gap: 8px; padding: 10px 12px; }
+  .conversation-search input { flex: 1; width: 100%; min-width: 0; min-height: 40px; padding: 0 10px; font-size: 16px !important; }
+  .conversation-row { justify-content: flex-start; gap: 10px; min-height: 72px; padding: 10px 12px; }
+  .conversation-row > .message-avatar { flex: 0 0 38px; }
+  .conversation-row > span { display: grid !important; flex: 1; min-width: 0; gap: 3px; }
+  .conversation-row strong { overflow: hidden; font-size: 12px; line-height: 1.3; text-overflow: ellipsis; white-space: nowrap; }
+  .conversation-row small { display: -webkit-box !important; overflow: hidden; font-size: 11px; line-height: 1.35; white-space: normal; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .conversation-row time { display: none !important; }
+  .conversation-header { gap: 8px; padding: 10px 11px; }
+  .conversation-header .conversation-back-button { display: grid; flex: 0 0 34px; width: 34px; height: 34px; place-items: center; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--brand-purple); }
+  .conversation-header > .avatar { flex: 0 0 38px; }
+  .conversation-header > div { flex: 1; min-width: 0; }
+  .conversation-header strong { overflow: hidden; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+  .conversation-header span { display: block; overflow: hidden; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+  .conversation-header .circle-action { flex: 0 0 32px; }
+  .message-history { min-height: 0; padding: 12px 9px; }
+  .message-bubble { max-width: 92%; padding: 9px 10px; }
+  .message-bubble p { font-size: 11px; }
+  .composer { gap: 6px; padding: 8px; }
+  .composer > input { min-width: 0; font-size: 12px; }
+  .conversation-empty { margin: 14px; color: var(--muted); font-size: 12px; }
+  .profile-cover::before { right: 9%; width: 92px; height: 92px; }
+}
+
+.conversation-back-button { display: none; }
+
+/* Motion is tied to an action: the brand rises, a like answers, and feedback arrives. */
+html { scroll-behavior: smooth; }
+.brand-mark-image, .banner-shape-mark { transition: transform 260ms cubic-bezier(.2,.75,.25,1), filter 260ms ease; }
+.brand-lockup:hover .brand-mark-image, .brand-lockup:focus-visible .brand-mark-image {
+  transform: translateY(-2px) rotate(-3deg);
+}
+.intro-banner:hover .banner-shape-mark, .intro-banner:focus-within .banner-shape-mark {
+  transform: translateY(-3px) rotate(-2deg) scale(1.035);
+  filter: drop-shadow(0 4px 5px rgba(35, 2, 84, .15));
+}
+.button { transition: transform 140ms ease, background-color 160ms ease, box-shadow 160ms ease; }
+.button:active { transform: translateY(0) scale(.98); }
+.switch, .switch i { transition: background-color 180ms ease, transform 220ms cubic-bezier(.2,.85,.25,1); }
+.post-actions button.liked svg, .tile-footer button.liked svg { animation: vibe-like 360ms cubic-bezier(.2,.85,.25,1); }
+.toast { animation: toast-arrive 220ms cubic-bezier(.2,.75,.25,1) both; }
+
+@keyframes vibe-like {
+  0% { transform: scale(.72) rotate(-8deg); }
+  58% { transform: scale(1.24) rotate(4deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+@keyframes toast-arrive {
+  from { opacity: 0; transform: translateY(8px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

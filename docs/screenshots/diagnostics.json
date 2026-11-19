@@ -1,0 +1,108 @@
+[
+  {
+    "viewport": "desktop-1440x900",
+    "status": 200,
+    "pageErrors": [],
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "horizontalOverflow": false,
+    "title": "VibeUp Talentos",
+    "mainVisible": true,
+    "feedCards": 10,
+    "mobileNavVisible": false,
+    "recommendationsVisible": true
+  },
+  {
+    "viewport": "laptop-1280x720",
+    "status": 200,
+    "pageErrors": [],
+    "viewportWidth": 1280,
+    "documentWidth": 1280,
+    "horizontalOverflow": false,
+    "title": "VibeUp Talentos",
+    "mainVisible": true,
+    "feedCards": 10,
+    "mobileNavVisible": false,
+    "recommendationsVisible": true
+  },
+  {
+    "viewport": "compact-desktop-1024x768",
+    "status": 200,
+    "pageErrors": [],
+    "viewportWidth": 1024,
+    "documentWidth": 1024,
+    "horizontalOverflow": false,
+    "title": "VibeUp Talentos",
+    "mainVisible": true,
+    "feedCards": 10,
+    "mobileNavVisible": false,
+    "recommendationsVisible": true
+  },
+  {
+    "viewport": "tablet-768x1024",
+    "status": 200,
+    "pageErrors": [],
+    "viewportWidth": 768,
+    "documentWidth": 768,
+    "horizontalOverflow": false,
+    "title": "VibeUp Talentos",
+    "mainVisible": true,
+    "feedCards": 10,
+    "mobileNavVisible": false,
+    "recommendationsVisible": true
+  },
+  {
+    "viewport": "mobile-390x844",
+    "status": 200,
+    "pageErrors": [],
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "horizontalOverflow": false,
+    "title": "VibeUp Talentos",
+    "mainVisible": true,
+    "feedCards": 10,
+    "mobileNavVisible": true,
+    "recommendationsVisible": true
+  },
+  {
+    "viewport": "mobile-360x800",
+    "status": 200,
+    "pageErrors": [],
+    "viewportWidth": 360,
+    "documentWidth": 360,
+    "horizontalOverflow": false,
+    "title": "VibeUp Talentos",
+    "mainVisible": true,
+    "feedCards": 10,
+    "mobileNavVisible": true,
+    "recommendationsVisible": true
+  },
+  {
+    "viewport": "login-brand-desktop-1440x900",
+    "status": 200,
+    "brandAssets": [
+      {
+        "alt": "Marca Jovem Programador",
+        "loaded": true
+      },
+      {
+        "alt": "Marca Senac Santa Catarina",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "viewport": "login-brand-mobile-390x844",
+    "status": 200,
+    "brandAssets": [
+      {
+        "alt": "Marca Jovem Programador",
+        "loaded": true
+      },
+      {
+        "alt": "Marca Senac Santa Catarina",
+        "loaded": true
+      }
+    ]
+  }
+]
