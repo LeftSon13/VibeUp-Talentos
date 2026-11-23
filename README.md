@@ -4,6 +4,10 @@
 
 Protótipo acadêmico responsivo para aproximar estudantes, empresas e comunidade educacional por meio de projetos, competências demonstráveis e oportunidades. A VibeUp é uma proposta conceitual independente; não é produto oficial do Senac nem do Programa Jovem Programador.
 
+## Demonstração pública
+
+A versão demonstrativa está publicada em [vibeup-talentos.joao-19a.workers.dev](https://vibeup-talentos.joao-19a.workers.dev/). Ela usa dados fictícios e salva as interações somente no localStorage de cada navegador; os dados não sincronizam entre visitantes.
+
 ## Executar localmente
 
 Requisitos: Node.js e npm instalados.
@@ -25,6 +29,8 @@ npm run preview
 `test:e2e` requer um servidor local iniciado com `npm run dev` em outro terminal.
 
 `build` executa a verificação TypeScript (`tsc -b`) antes de gerar os arquivos em `dist/`. O teste de fumaça Playwright cobre os fluxos principais do protótipo; não há suíte de testes unitários nem backend.
+
+Para gerar uma nova versão da demonstração no Cloudflare Workers, conecte a CLI cf à sua conta e execute `npm run deploy`.
 
 Para repetir as capturas responsivas, mantenha `npm run dev` aberto em outro terminal, instale o Chromium do Playwright uma vez e execute:
 

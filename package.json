@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "npm run build && cf deploy ./dist",
     "lint": "oxlint",
     "preview": "vite preview",
     "capture:responsive": "node scripts/capture-responsive.mjs",
@@ -22,6 +23,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "cf": "^1.0.0-rc.4",
     "oxlint": "^1.90.0",
     "playwright": "^1.65.1",
     "typescript": "~7.0.2",
